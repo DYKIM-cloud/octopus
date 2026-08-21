@@ -1,0 +1,190 @@
+{
+     "metadata": {
+          "subject": "InP_core_test",
+          "group": "Hanyang",
+          "logLevel": "DEBUG",
+          "userName": "NY",
+          "modeType": "virtual",
+          "jobID": 0,
+          "jobFileName": "Automatic",
+          "jobStatus": "TaskScheduler-->schedule all task:2",
+          "temperature": 25,
+          "humidity": "68%",
+          "jobSubmitTime": "2024-06-28 20:57:01",
+          "jobStartTime": "2024-06-28 20:57:11",
+          "jobWaitingTime(sec)": 0.03,
+          "jobFinishTime": "2024-06-28 20:57:11",
+          "jobTurnAroundTime(sec)": 10.25,
+          "jobDelayTimeList": [],
+          "jobDelayTime(sec)": 0,
+          "experimentIdx": 0
+     },
+     "algorithm": {
+          "model": "Automatic",
+          "totalExperimentNum": 2,
+          "inputParams": [
+               {
+                    "AddSolution=InP_Injectionrate": 1250,
+                    "AddSolution=A_Injectionrate": 1250,
+                    "preHeat=Temperature": 60,
+                    "Heat=Temperature": 70
+               }
+          ]
+     },
+     "process": {
+          "Synthesis": [
+               {
+                    "Module": "FlowSynthesis",
+                    "Data": [
+                         {
+                              "Task": "FlowSynthesis_preHeat",
+                              "Data": {
+                                   "Temperature": {
+                                        "Value": 60,
+                                        "Dimension": "\u00baC"
+                                   },
+                                   "Device": {
+                                        "heaterAddress": "ns=1;i=54428",
+                                        "temperatureAddress": "ns=1;i=54425",
+                                        "checkerAddress": "ns=1;i=54427",
+                                        "deviceName": "Asia"
+                                   }
+                              }
+                         },
+                         {
+                              "Task": "FlowSynthesis_Heat",
+                              "Data": {
+                                   "Temperature": {
+                                        "Value": 70,
+                                        "Dimension": "\u00baC"
+                                   },
+                                   "Device": {
+                                        "heaterAddress": "ns=1;i=54440",
+                                        "temperatureAddress": "ns=1;i=54437",
+                                        "checkerAddress": "ns=1;i=54439",
+                                        "deviceName": "Asia"
+                                   }
+                              }
+                         },
+                         {
+                              "Task": "FlowSynthesis_AddSolution",
+                              "Data": {
+                                   "Solution": "InP",
+                                   "Injectionrate": {
+                                        "Value": 1250,
+                                        "Dimension": "\u03bcL/s"
+                                   },
+                                   "Device": {
+                                        "solutionType": "Metal",
+                                        "pumpPort": "ns=5;i=7003",
+                                        "pumpClose": "ns=5;i=7004",
+                                        "pumpFlush": "ns=5;i=7002",
+                                        "pumpAddress": "ns=1;i=54447",
+                                        "deviceName": "Asia"
+                                   }
+                              }
+                         },
+                         {
+                              "Task": "FlowSynthesis_AddSolution",
+                              "Data": {
+                                   "Solution": "A",
+                                   "Injectionrate": {
+                                        "Value": 1250,
+                                        "Dimension": "\u03bcL/s"
+                                   },
+                                   "Device": {
+                                        "solutionType": "Reductant",
+                                        "pumpPort": "ns=5;i=7003",
+                                        "pumpClose": "ns=5;i=7004",
+                                        "pumpFlush": "ns=5;i=7002",
+                                        "pumpAddress": "ns=1;i=54457",
+                                        "deviceName": "Asia"
+                                   }
+                              }
+                         }
+                    ]
+               }
+          ],
+          "Characterization": [],
+          "Collection": [
+               {
+                    "Module": "Collector",
+                    "Data": [
+                         {
+                              "Task": "Collector_Collect",
+                              "Data": {
+                                   "Volume": {
+                                        "Value": 1000,
+                                        "Dimension": "\u03bcL/s"
+                                   },
+                                   "Time": {
+                                        "Value": 24,
+                                        "Dimension": "s"
+                                   },
+                                   "Device": {
+                                        "Pump": {
+                                             "InP": {
+                                                  "solutionType": "Metal",
+                                                  "pumpPort": "ns=5;i=7003",
+                                                  "pumpClose": "ns=5;i=7004",
+                                                  "pumpFlush": "ns=5;i=7002",
+                                                  "pumpAddress": "ns=1;i=54447",
+                                                  "deviceName": "Asia"
+                                             },
+                                             "A": {
+                                                  "solutionType": "Reductant",
+                                                  "pumpPort": "ns=5;i=7003",
+                                                  "pumpClose": "ns=5;i=7004",
+                                                  "pumpFlush": "ns=5;i=7002",
+                                                  "pumpAddress": "ns=1;i=54457",
+                                                  "deviceName": "Asia"
+                                             }
+                                        },
+                                        "Heater": {
+                                             "Heater": {
+                                                  "heaterAddress": "ns=1;i=54440",
+                                                  "temperatureAddress": "ns=1;i=54437",
+                                                  "checkerAddress": "ns=1;i=54439",
+                                                  "deviceName": "Asia"
+                                             },
+                                             "preHeater": {
+                                                  "heaterAddress": "ns=1;i=54428",
+                                                  "temperatureAddress": "ns=1;i=54425",
+                                                  "checkerAddress": "ns=1;i=54427",
+                                                  "deviceName": "Asia"
+                                             }
+                                        },
+                                        "UV": {
+                                             "Spectrometer": {
+                                                  "DeviceName": "USB2000+",
+                                                  "DetectionRange": "200-850nm",
+                                                  "Solvent": {
+                                                       "Solution": "H2O",
+                                                       "Value": 1,
+                                                       "Dimension": "\u03bcL"
+                                                  }
+                                             },
+                                             "LightSource": {
+                                                  "DeviceName": "DH-2000-BAL",
+                                                  "DetectionRange": "210-2500nm",
+                                                  "Lamp": "deuterium(25W) and halogen lamps(20W)"
+                                             }
+                                        },
+                                        "Collector": {
+                                             "Asia": {
+                                                  "collectorPort": "ns=1;i=58192",
+                                                  "collectorMode": "ns=1;i=54415",
+                                                  "collectorPositionset": "ns=5;i=7026",
+                                                  "collectorPositionread": "ns=1;i=54416",
+                                                  "deviceName": "Asia"
+                                             }
+                                        }
+                                   }
+                              }
+                         }
+                    ]
+               }
+          ]
+     },
+     "result": {}
+}

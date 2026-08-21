@@ -1,0 +1,19 @@
+alist = [0,1]
+has = 0 in alist
+'''
+if has:
+    msg="Dilute"
+else:
+    msg="React"
+print(msg)
+'''
+msg='React'
+while True:
+    print(msg)
+    if msg=="Dilute":
+        break
+    if has:
+        msg="Dilute"
+    
+
+ 

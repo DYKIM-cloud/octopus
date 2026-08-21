@@ -1,0 +1,15 @@
+Analysis/AnalysisUV.py
+line 38) absorbances.append(np.log10(abs(ref/measured)))
+
+Hardware/UV/OceanOptics/UV/uv_spectrum.py
+line 126) self.absorbances.append(np.log10(abs(ref / measured)))
+
+Hardware/UV/uv_spectrum.py
+line 126) self.absorbances.append(np.log10(abs(ref / measured)))
+
+
+TimeChecker.py
+line 12) class Timer에 TIME_CONSTANT = 84 추가
+line 18)self.uv_time_sec = math.ceil(self.uv_time_min * TIME_CONSTANT +10)        
+line 21)self.dillute_time_sec = math.ceil(self.dillute_time_min * TIME_CONSTANT +10)
+line 24)self.collect_time_sec = math.ceil(self.collect_time_min * TIME_CONSTANT)   

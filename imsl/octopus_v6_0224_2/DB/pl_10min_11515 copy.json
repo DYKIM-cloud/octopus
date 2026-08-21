@@ -1,0 +1,861 @@
+{
+     "metadata": {
+          "subject": "InP_core_test",
+          "group": "Hanyang",
+          "logLevel": "DEBUG",
+          "userName": "NY",
+          "modeType": "real",
+          "jobID": 0,
+          "jobFileName": "Autonomous",
+          "jobStatus": "1/4:DB-->store in DB",
+          "temperature": 25,
+          "humidity": "68%",
+          "jobSubmitTime": "2025-03-19 14:06:12",
+          "jobStartTime": "2025-03-19 14:06:12",
+          "jobWaitingTime(sec)": 0.25,
+          "jobFinishTime": "Now Recording...Please check final data",
+          "jobTurnAroundTime(sec)": "Now Recording...Please check final data",
+          "jobDelayTimeList": [],
+          "jobDelayTime(sec)": 0,
+          "experimentIdx": 0
+     },
+     "algorithm": {
+          "model": "PreviousModel",
+          "modelPath": [
+               "USER\\NY\\SaveModel\\InP_core_test0\\20250318\\real\\20250318_175449_0_31_obj.pickle"
+          ],
+          "totalCycleNum": 4,
+          "totalExperimentNum": 4
+     },
+     "process": {
+          "Synthesis": [
+               {
+                    "Module": "FlowSynthesis",
+                    "Data": [
+                         {
+                              "Task": "FlowSynthesis_preHeat",
+                              "Data": {
+                                   "Temperature": {
+                                        "Value": 56,
+                                        "Dimension": "\u00baC"
+                                   },
+                                   "Device": {
+                                        "heaterAddress": "ns=1;i=54440",
+                                        "temperatureAddress": "ns=1;i=54437",
+                                        "checkerAddress": "ns=1;i=54439",
+                                        "deviceName": "Asia"
+                                   }
+                              }
+                         },
+                         {
+                              "Task": "FlowSynthesis_Heat",
+                              "Data": {
+                                   "Temperature": {
+                                        "Value": 223,
+                                        "Dimension": "\u00baC"
+                                   },
+                                   "Device": {
+                                        "heaterAddress": "ns=1;i=54428",
+                                        "temperatureAddress": "ns=1;i=54425",
+                                        "checkerAddress": "ns=1;i=54427",
+                                        "deviceName": "Asia"
+                                   }
+                              }
+                         },
+                         {
+                              "Task": "FlowSynthesis_AddSolution",
+                              "Data": {
+                                   "Solution": "InP",
+                                   "Injectionrate": {
+                                        "Value": 435,
+                                        "Dimension": "\u03bcL/s"
+                                   },
+                                   "Device": {
+                                        "solutionType": "Metal",
+                                        "pumpPort": "ns=5;i=7003",
+                                        "pumpClose": "ns=5;i=7004",
+                                        "pumpFlush": "ns=5;i=7002",
+                                        "pumpAddress": "ns=1;i=54447",
+                                        "deviceName": "Asia"
+                                   }
+                              }
+                         },
+                         {
+                              "Task": "FlowSynthesis_AddSolution",
+                              "Data": {
+                                   "Solution": "A",
+                                   "Injectionrate": {
+                                        "Value": 1215,
+                                        "Dimension": "\u03bcL/s"
+                                   },
+                                   "Device": {
+                                        "solutionType": "Reductant",
+                                        "pumpPort": "ns=5;i=7003",
+                                        "pumpClose": "ns=5;i=7004",
+                                        "pumpFlush": "ns=5;i=7002",
+                                        "pumpAddress": "ns=1;i=54457",
+                                        "deviceName": "Asia"
+                                   }
+                              }
+                         }
+                    ]
+               }
+          ],
+          "Characterization": [
+               {
+                    "Module": "UV",
+                    "Data": [
+                         {
+                              "Task": "UV_GetAbs",
+                              "Data": {
+                                   "Device": {
+                                        "Spectrometer": {
+                                             "DeviceName": "USB2000+",
+                                             "DetectionRange": "200-850nm",
+                                             "Solvent": {
+                                                  "Solution": "H2O",
+                                                  "Value": 1,
+                                                  "Dimension": "\u03bcL"
+                                             }
+                                        },
+                                        "LightSource": {
+                                             "DeviceName": "DH-2000-BAL",
+                                             "DetectionRange": "210-2500nm",
+                                             "Lamp": "deuterium(25W) and halogen lamps(20W)"
+                                        }
+                                   },
+                                   "Hyperparameter": {
+                                        "WavelengthMin": {
+                                             "Description": "WavelengthMin=300 (int): slice wavlength section depending on wavelength_min and wavelength_max",
+                                             "Value": 410,
+                                             "Dimension": "nm"
+                                        },
+                                        "WavelengthMax": {
+                                             "Description": "WavelengthMax=849 (int): slice wavlength section depending on wavelength_min and wavelength_max",
+                                             "Value": 700,
+                                             "Dimension": "nm"
+                                        },
+                                        "BoxCarSize": {
+                                             "Description": "BoxCarSize=10 (int): smooth strength",
+                                             "Value": 30,
+                                             "Dimension": "None"
+                                        },
+                                        "Prominence": {
+                                             "Description": "Prominence=0.01 (float): minimum peak Intensity for detection",
+                                             "Value": 0.01,
+                                             "Dimension": "None"
+                                        },
+                                        "PeakWidth": {
+                                             "Description": "PeakWidth=20 (int): minumum peak width for detection",
+                                             "Value": 20,
+                                             "Dimension": "nm"
+                                        }
+                                   }
+                              }
+                         }
+                    ]
+               },
+               {
+                    "Module": "PL",
+                    "Data": [
+                         {
+                              "Task": "PL_GetPl",
+                              "Data": {
+                                   "Device": {
+                                        "Spectrometer": {
+                                             "DeviceName": "SR4",
+                                             "DetectionRange": "200-850nm",
+                                             "Solvent": {
+                                                  "Solution": "H2O",
+                                                  "Value": 1,
+                                                  "Dimension": "\u03bcL"
+                                             }
+                                        },
+                                        "LightSource": {
+                                             "DeviceName": "DH-2000-BAL",
+                                             "DetectionRange": "210-2500nm",
+                                             "Lamp": "deuterium(25W) and halogen lamps(20W)"
+                                        }
+                                   },
+                                   "Hyperparameter": {
+                                        "WavelengthMin": {
+                                             "Description": "WavelengthMin=300 (int): slice wavlength section depending on wavelength_min and wavelength_max",
+                                             "Value": 430,
+                                             "Dimension": "nm"
+                                        },
+                                        "WavelengthMax": {
+                                             "Description": "WavelengthMax=849 (int): slice wavlength section depending on wavelength_min and wavelength_max",
+                                             "Value": 700,
+                                             "Dimension": "nm"
+                                        },
+                                        "BoxCarSize": {
+                                             "Description": "BoxCarSize=10 (int): smooth strength",
+                                             "Value": 10,
+                                             "Dimension": "None"
+                                        },
+                                        "Prominence": {
+                                             "Description": "Prominence=0.01 (float): minimum peak Intensity for detection",
+                                             "Value": 0.01,
+                                             "Dimension": "None"
+                                        },
+                                        "PeakWidth": {
+                                             "Description": "PeakWidth=20 (int): minumum peak width for detection",
+                                             "Value": 15,
+                                             "Dimension": "nm"
+                                        }
+                                   }
+                              }
+                         }
+                    ]
+               }
+          ],
+          "Collection": [
+               {
+                    "Module": "Collector",
+                    "Data": [
+                         {
+                              "Task": "Collector_Collect",
+                              "Data": {
+                                   "Volume": {
+                                        "Value": 1000,
+                                        "Dimension": "\u03bcL/s"
+                                   },
+                                   "Time": {
+                                        "Value": 51,
+                                        "Dimension": "s"
+                                   },
+                                   "Device": {
+                                        "Asia": {
+                                             "collectorPort": "ns=1;i=58192",
+                                             "collectorMode": "ns=1;i=54415",
+                                             "collectorPositionset": "ns=5;i=7027",
+                                             "collectorPositionreadX": "ns=1;i=54414",
+                                             "collectorPositionreadY": "ns=1;i=54413",
+                                             "deviceName": "Asia"
+                                        }
+                                   }
+                              }
+                         }
+                    ]
+               }
+          ]
+     },
+     "result": {
+          "UV_GetAbs": {
+               "Device": {
+                    "Spectrometer": {
+                         "DeviceName": "USB2000+",
+                         "DetectionRange": "200-850nm",
+                         "Solvent": {
+                              "Solution": "H2O",
+                              "Value": 1,
+                              "Dimension": "\u03bcL"
+                         }
+                    },
+                    "LightSource": {
+                         "DeviceName": "DH-2000-BAL",
+                         "DetectionRange": "210-2500nm",
+                         "Lamp": "deuterium(25W) and halogen lamps(20W)"
+                    }
+               },
+               "Hyperparameter": {
+                    "WavelengthMin": {
+                         "Description": "WavelengthMin=300 (int): slice wavlength section depending on wavelength_min and wavelength_max",
+                         "Value": 410,
+                         "Dimension": "nm"
+                    },
+                    "WavelengthMax": {
+                         "Description": "WavelengthMax=849 (int): slice wavlength section depending on wavelength_min and wavelength_max",
+                         "Value": 700,
+                         "Dimension": "nm"
+                    },
+                    "BoxCarSize": {
+                         "Description": "BoxCarSize=10 (int): smooth strength",
+                         "Value": 30,
+                         "Dimension": "None"
+                    },
+                    "Prominence": {
+                         "Description": "Prominence=0.01 (float): minimum peak Intensity for detection",
+                         "Value": 0.01,
+                         "Dimension": "None"
+                    },
+                    "PeakWidth": {
+                         "Description": "PeakWidth=20 (int): minumum peak width for detection",
+                         "Value": 20,
+                         "Dimension": "nm"
+                    }
+               },
+               "Data": {
+                    "Wavelength": [
+                         400,
+401,
+402,
+403,
+404,
+405,
+406,
+407,
+408,
+409,
+410,
+411,
+412,
+413,
+414,
+415,
+416,
+417,
+418,
+419,
+420,
+421,
+422,
+423,
+424,
+425,
+426,
+427,
+428,
+429,
+430,
+431,
+432,
+433,
+434,
+435,
+436,
+437,
+438,
+439,
+440,
+441,
+442,
+443,
+444,
+445,
+446,
+447,
+448,
+449,
+450,
+451,
+452,
+453,
+454,
+455,
+456,
+457,
+458,
+459,
+460,
+461,
+462,
+463,
+464,
+465,
+466,
+467,
+468,
+469,
+470,
+471,
+472,
+473,
+474,
+475,
+476,
+477,
+478,
+479,
+480,
+481,
+482,
+483,
+484,
+485,
+486,
+487,
+488,
+489,
+490,
+491,
+492,
+493,
+494,
+495,
+496,
+497,
+498,
+499,
+500,
+501,
+502,
+503,
+504,
+505,
+506,
+507,
+508,
+509,
+510,
+511,
+512,
+513,
+514,
+515,
+516,
+517,
+518,
+519,
+520,
+521,
+522,
+523,
+524,
+525,
+526,
+527,
+528,
+529,
+530,
+531,
+532,
+533,
+534,
+535,
+536,
+537,
+538,
+539,
+540,
+541,
+542,
+543,
+544,
+545,
+546,
+547,
+548,
+549,
+550,
+551,
+552,
+553,
+554,
+555,
+556,
+557,
+558,
+559,
+560,
+561,
+562,
+563,
+564,
+565,
+566,
+567,
+568,
+569,
+570,
+571,
+572,
+573,
+574,
+575,
+576,
+577,
+578,
+579,
+580,
+581,
+582,
+583,
+584,
+585,
+586,
+587,
+588,
+589,
+590,
+591,
+592,
+593,
+594,
+595,
+596,
+597,
+598,
+599,
+600,
+601,
+602,
+603,
+604,
+605,
+606,
+607,
+608,
+609,
+610,
+611,
+612,
+613,
+614,
+615,
+616,
+617,
+618,
+619,
+620,
+621,
+622,
+623,
+624,
+625,
+626,
+627,
+628,
+629,
+630,
+631,
+632,
+633,
+634,
+635,
+636,
+637,
+638,
+639,
+640,
+641,
+642,
+643,
+644,
+645,
+646,
+647,
+648,
+649,
+650
+
+                    ],
+                    "RawSpectrum": [
+                         804,
+706,
+698,
+754,
+754,
+802,
+728,
+768,
+760,
+766,
+716,
+806,
+796,
+718,
+826,
+768,
+738,
+818,
+774,
+896,
+828,
+916,
+920,
+902,
+1004,
+892,
+838,
+780,
+808,
+774,
+798,
+748,
+832,
+756,
+816,
+732,
+780,
+864,
+770,
+752,
+796,
+788,
+838,
+770,
+808,
+782,
+786,
+760,
+816,
+740,
+828,
+860,
+770,
+820,
+792,
+766,
+822,
+778,
+818,
+806,
+858,
+878,
+868,
+808,
+858,
+900,
+978,
+910,
+820,
+1020,
+942,
+938,
+996,
+1100,
+1198,
+1210,
+1316,
+1368,
+1392,
+1544,
+1626,
+1782,
+1990,
+2090,
+2246,
+2596,
+2982,
+3244,
+3440,
+3860,
+4468,
+4958,
+5654,
+6144,
+6974,
+7922,
+9048,
+9922,
+10854,
+12350,
+13260,
+15044,
+16778,
+18378,
+20526,
+22636,
+24590,
+27356,
+29338,
+32334,
+34646,
+37394,
+40292,
+43416,
+46204,
+48778,
+52654,
+54514,
+57734,
+60608,
+62988,
+65062,
+67490,
+70990,
+73058,
+74564,
+76044,
+77000,
+78908,
+80418,
+81378,
+81464,
+82544,
+82478,
+81874,
+81876,
+81322,
+80088,
+79094,
+77876,
+76524,
+75374,
+72898,
+71134,
+68754,
+66778,
+65220,
+62016,
+58806,
+56478,
+54042,
+51352,
+48692,
+45766,
+43424,
+41502,
+38876,
+36374,
+34280,
+32200,
+30368,
+28678,
+26136,
+24948,
+23090,
+21756,
+20298,
+18868,
+17194,
+16104,
+15172,
+14018,
+13306,
+12280,
+11362,
+10782,
+10162,
+9568,
+9002,
+8520,
+8066,
+7420,
+7194,
+6512,
+6308,
+5776,
+5692,
+5198,
+5016,
+4854,
+4534,
+4302,
+4180,
+3958,
+3778,
+3544,
+3450,
+3228,
+3132,
+2954,
+2822,
+2782,
+2698,
+2600,
+2588,
+2562,
+2296,
+2350,
+2160,
+2186,
+2100,
+2080,
+2042,
+1894,
+1948,
+1912,
+1778,
+1714,
+1706,
+1618,
+1662,
+1616,
+1618,
+1568,
+1494,
+1456,
+1384,
+1506,
+1348,
+1400,
+1380,
+1384,
+1294,
+1394,
+1302,
+1344,
+1250,
+1322,
+1248,
+1274,
+1156,
+1160,
+1182,
+1116,
+1250,
+1256,
+1192,
+1148,
+1164,
+1118,
+1158
+                    ],
+                    "Property": {
+                         "lambdamax": 0,
+                         "p_v_ratio": 0
+                    }
+               }
+          },
+          "PL_GetPl": {
+               "Device": {
+                    "Spectrometer": {
+                         "DeviceName": "SR4",
+                         "DetectionRange": "200-850nm",
+                         "Solvent": {
+                              "Solution": "H2O",
+                              "Value": 1,
+                              "Dimension": "\u03bcL"
+                         }
+                    },
+                    "LightSource": {
+                         "DeviceName": "DH-2000-BAL",
+                         "DetectionRange": "210-2500nm",
+                         "Lamp": "deuterium(25W) and halogen lamps(20W)"
+                    }
+               },
+               "Hyperparameter": {
+                    "WavelengthMin": {
+                         "Description": "WavelengthMin=300 (int): slice wavlength section depending on wavelength_min and wavelength_max",
+                         "Value": 430,
+                         "Dimension": "nm"
+                    },
+                    "WavelengthMax": {
+                         "Description": "WavelengthMax=849 (int): slice wavlength section depending on wavelength_min and wavelength_max",
+                         "Value": 700,
+                         "Dimension": "nm"
+                    },
+                    "BoxCarSize": {
+                         "Description": "BoxCarSize=10 (int): smooth strength",
+                         "Value": 10,
+                         "Dimension": "None"
+                    },
+                    "Prominence": {
+                         "Description": "Prominence=0.01 (float): minimum peak Intensity for detection",
+                         "Value": 0.01,
+                         "Dimension": "None"
+                    },
+                    "PeakWidth": {
+                         "Description": "PeakWidth=20 (int): minumum peak width for detection",
+                         "Value": 15,
+                         "Dimension": "nm"
+                    }
+               },
+               "Data": {
+                    "Wavelength": [
+                         
+                    ],
+                    "RawSpectrum": [
+                         
+                    ],
+                    "Property": {
+                         "lambdamax": 533.094734683872,
+                         "FWHM": 42,
+                         "intensity": 82544
+                    }
+               }
+          }
+     }
+}

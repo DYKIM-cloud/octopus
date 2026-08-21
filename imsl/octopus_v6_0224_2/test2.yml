@@ -1,0 +1,58 @@
+name: seabreeze_py310
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  # --- Python core ---
+  - python=3.10.17
+  - pip
+  - setuptools
+  - wheel
+
+  # --- Numerical stack (ABI 안정) ---
+  - numpy=1.26.4
+  - scipy=1.10.*
+  - pandas=2.0.*
+  - numexpr=2.8.*
+  - bottleneck
+  - mkl
+  - mkl-service
+  - mkl_fft
+  - mkl_random
+  - intel-openmp
+
+  # --- Plotting / Qt ---
+  - matplotlib=3.7.*
+  - pillow
+  - pyqt=5.15.*
+  - qt-main=5.15.*
+
+  # --- System / crypto / network ---
+  - openssl
+  - cryptography
+  - cffi
+  - requests
+  - urllib3
+  - certifi
+  - charset-normalizer
+  - idna
+  - pysocks
+  - paramiko
+
+  # --- Performance / parallel ---
+  - joblib
+  - threadpoolctl
+  - tbb
+
+  # --- IO ---
+  - sqlite
+  - zlib
+  - xz
+  - zstd
+  - libusb
+  - pyusb
+
+  # --- seabreeze ---
+  - seabreeze=2.9.2
+

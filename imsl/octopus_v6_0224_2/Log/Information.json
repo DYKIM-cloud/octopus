@@ -1,0 +1,61 @@
+{
+	"TELEGRAM": 
+	[
+		{
+			"TELEGRAM_USER_ID": 1787786713,
+			"TELEGRAM_USER_TOKEN": "1872279324:AAGrpEhhR56euPqhJCoyJ2FnuLP7Y15_mk4"
+		}
+	],
+	"FACEBOOK_MESSENGER": 
+	[
+		{
+			"FACEBOOK_MESSENGER_USER_ID": "yoohj9475@naver.com",
+			"FACEBOOK_MESSENGER_USER_PWD": "3161737kk!",
+			"FACEBOOK_MESSENGER_TOKEN": "EAACznCOEvCYBAL0TZAGNVVpS6kWBvB0ZAsCI4YlpRaYKM2rqDcLIC5LfkTxm8zewBAFFamE4ZALCr7C8AyQ2HyBdT4BbrGyZBL1YykZBZBh7zZASxYVb6Q0hCjZACVwnM7cWxT8rSXas83wLMRaZCALbzKKncraSaRGeG3ldgOCWvRZABwb3B5LZCBqeBmwDWjIqi4ZD"
+		}
+	],
+	"KAKAOTALK": 
+	[
+		{
+			"KAKAOTALK_TARGET_URL": "https://kapi.kakao.com/v2/api/talk/memo/default/send",
+			"KAKAOTALK_access_token": "Z-zqo9tPIXT6SV72Srxb6IuOimgNsadEfL9nVgo9cpgAAAF6mPD-dQ",
+			"KAKAOTALK_token_type": "bearer",
+			"KAKAOTALK_refresh_token": "ZJHBM7268liu23kCPc24p66-fJY6DSfvRv75CQopcSEAAAF6YebYog",
+			"KAKAOTALK_expires_in": 21599,
+			"KAKAOTALK_scope": "talk_message",
+			"KAKAOTALK_refresh_token_expires_in": 5183999,
+			"KAKAOTALK_rest_api_key": "bef98db4c6ef9ce6e96e3265273d24fa",
+			"KAKAOTALK_TOKEN_URL": "https://kauth.kakao.com/oauth/authorize?client_id=bef98db4c6ef9ce6e96e3265273d24fa&redirect_uri=https://example.com/oauth&response_type=code"
+		}
+	],
+	"LINE": 
+	[
+		{
+			"LINE_TARGET_URL": "https://notify-api.line.me/api/notify",
+			"LINE_USER_TOKEN": "inEqSNy3P6IOoUyQwFnxl4Hcfj0rsItXYXmBgxZWG2B"
+		},
+		{
+			"LINE_TARGET_URL": "https://notify-api.line.me/api/notify",
+			"LINE_USER_TOKEN": "BSIfIMZgZgyjk4R3hAsNLtv2zKt2fNM0V5EQPKaUYxv"
+		},
+		{
+			"LINE_TARGET_URL": "https://notify-api.line.me/api/notify",
+			"LINE_USER_TOKEN": "8bfko5XvH0MGNv3FdIjHZbXTpmzQXj6x3DE1JIaJga3"
+		}
+	],
+	"MAIL": 
+	[
+		{
+			"MAIL_GMAIL_USER_ID": "yoohj9475@korea.ac.kr",
+			"MAIL_GMAIL_USER_PWD": "rajniqbvinsvxhbi"
+		}
+	],
+	"DOORAY":
+	[
+		{
+			"DOORAY_TARGET_URL" : "https://hook.gov-dooray.com/services/2901831766878928764/3446495559113419135/-tbec9sPS1KJ9x3-h_9VIA",
+			"DOORAY_SAFETY_SYSTEM" : "https://hook.gov-dooray.com/services/2901831766878928764/3446497274606471078/0aDIDCBNSk-c_cY2aktamg",
+			"DOORAY_USER_TOKEN" : "m1olidaukdr7:Lv2nz0ZLT5irff90D2h6kQ"
+		}
+	]
+}
