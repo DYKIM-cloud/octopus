@@ -1,0 +1,87 @@
+{
+    "metadata" : 
+    {
+        "subject":"Ag precision 8 test in AI smart lab project",
+        "group":"KIST_CSRC",
+        "logLevel":"DEBUG"
+    },
+    "algorithm":
+    {
+        "model":"Automatic",
+        "totalExperimentNum":8,
+        "inputParams":[
+        ]
+    },
+    "process":
+    {
+        "Synthesis":{
+            "BatchSynthesis":{
+                "Sequence":["AddSolution_AgNO3","AddSolution_H2O", "AddSolution_Citrate", "AddSolution_H2O2","Stir","Heat","Mix", "AddSolution_NaBH4", "React"],
+                "fixedParams":
+                {
+
+                    "AddSolution=AgNO3_Concentration" : 0.00125,
+                    "AddSolution=AgNO3_Volume" : 1200,
+                    "AddSolution=AgNO3_Injectionrate" : 500,
+                    "AddSolution=H2O2_Concentration" : 0.375,
+                    "AddSolution=H2O2_Volume" : 1200,
+                    "AddSolution=H2O2_Injectionrate" : 500,
+                    "AddSolution=H2O_Concentration" : 0,
+                    "AddSolution=H2O_Volume" : 2400,
+                    "AddSolution=H2O_Injectionrate" : 500,
+                    "AddSolution=Citrate_Concentration" : 0.02,
+                    "AddSolution=Citrate_Volume" : 2000,
+                    "AddSolution=Citrate_Injectionrate" : 500,
+                    "AddSolution=NaBH4_Concentration" : 0.002,
+                    "AddSolution=NaBH4_Volume" : 2400,
+                    "AddSolution=NaBH4_Injectionrate" : 500,
+
+                    "Stir=StirRate":800,
+                    "Heat=Temperature":50,
+                    "Mix=Time":300,
+                    "React=Time":1800
+                }
+            },
+            "FlowSynthesis":{}
+        },
+        "Preprocess":{
+            "Preprocess":{
+                "fixedParams":{
+                    "Preprocess=Sequence": 
+                    ["Preprocess_Washing_AddSolution_Ethanol","Preprocess_Washing_AddSolution_Acetone","Preprocess_Washing_AddSolution_H2O","Preprocess_MoveContainer","Preprocess_Diffuse",
+                    "Preprocess_Centrifugation","Preprocess_MoveContainer","Preprocess_RemoveLiquid","Preprocess_MoveContainer",
+                    "Preprocess_Weighing","Preprocess_Ink_AddSolution_Nafion","Preprocess_Ink_AddSolution_IPA","Preprocess_Ink_AddSolution_H2O",
+                "Preprocess_MoveContainer","Preprocess_Mix"],
+                "Preprocess_Washing_AddSolution=Ethanol_Volume" :1200,
+                "Preprocess_Washing_AddSolution=Ethanol_Injectrate" :300,
+                "Preprocess_Washing_AddSolution=Acetone_Volume" :1200,
+                "Preprocess_Washing_AddSolution=Acetone_Injectrate" :300,
+                "Preprocess_Washing_AddSolution=H2O_Volume" :1200,
+                "Preprocess_Washing_AddSolution=H2O_Injectrate" :300,
+                "Preprocess_Diffuse=Power": 40,
+                "Preprocess_Diffuse=Time": 600,
+                "Preprocess_Centrifugation=Power":7000,
+                "Preprocess_Centrifugation=Time":1800,
+                "Preprocess_Ink_AddSolution=Nafion_Volume":12,
+                "Preprocess_Ink_AddSolution=Nafion_Injectrate":1000,
+                "Preprocess_Ink_AddSolution=IPA_Volume":46,
+                "Preprocess_Ink_AddSolution=IPA_Injectrate":1000,
+                "Preprocess_Ink_AddSolution=H2O_Volume":8,
+                "Preprocess_Ink_AddSolution=H2O_Injectrate":1000,
+                "Preprocess_Mix=Power": 40,
+                "Preprocess_Mix=Time": 600  
+            }
+        }
+        },
+    
+        "Characterization":{
+            "UV":
+            {
+            }
+        },
+        "Evaluation":{
+            "RDE":{},
+            "Electrode":{}
+        }
+    }
+}

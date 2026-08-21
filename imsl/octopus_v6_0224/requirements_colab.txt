@@ -1,0 +1,7 @@
+seabreeze
+scikit-optimize
+opcua
+paramiko
+prettytable
+pyaml
+lxml

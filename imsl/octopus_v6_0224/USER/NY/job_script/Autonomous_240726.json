@@ -1,0 +1,99 @@
+{
+    "metadata" : 
+    {
+        "subject":"InP_core_test",
+        "group":"Hanyang",
+        "logLevel":"DEBUG"
+    },
+    "algorithm":{
+        "model":"BayesianOptimization",
+        "batchSize":1, 
+        "totalCycleNum":5,
+        "verbose":0,
+        "initRandom":20,       
+        "randomState":0,
+        "sampling":{
+            "samplingMethod":"latin",
+            "samplingNum":20
+        },
+        "acq":{
+            "acqMethod":"ucb",
+            "acqSampler":"greedy",
+            "acqHyperparameter":{
+                "kappa":10.0
+            }
+        },
+        "loss":{
+            "lossMethod":"lambdamaxpvLoss",
+            "lossTarget":{
+                "GetAbs":{
+                    "Property":{
+                        "lambdamax":573
+                    },
+                    "Ratio":{
+                        "lambdamax":0,
+                        "p_v_ratio":1.0
+                    }
+                }
+            }
+        }, 
+        "prange":{
+            "AddSolution=InP_Injectionrate" : [100,1250,50],
+            "AddSolution=A_Injectionrate" : [100,1250,50],
+            "preHeat=Temperature" : [30,100,1],
+            "Heat=Temperature":[100,250,1]
+        },
+        "initParameterList":[],
+        "constraints":[]
+    },
+    "process":{
+        "Synthesis":{
+            "FlowSynthesis":{
+                "Sequence":["FlowSynthesis_preHeat","FlowSynthesis_Heat","FlowSynthesis_AddSolution=InP","FlowSynthesis_AddSolution=A"],
+                "fixedParams":{}
+            }
+        }
+        ,
+        "Characterization":{
+            "UV":{
+                "Sequence":["UV_GetAbs"],
+                "fixedParams":
+                {
+                    "Hyperparameter":{
+                        "WavelengthMin":{
+                            "Description":"WavelengthMin=300 (int): slice wavlength section depending on wavelength_min and wavelength_max",
+                            "Value": 300,
+                            "Dimension": "nm"
+                        },
+                        "WavelengthMax":{
+                            "Description":"WavelengthMax=849 (int): slice wavlength section depending on wavelength_min and wavelength_max",
+                            "Value": 849,
+                            "Dimension": "nm"
+                        },
+                        "BoxCarSize":{
+                            "Description":"BoxCarSize=10 (int): smooth strength",
+                            "Value": 10,
+                            "Dimension": "None"
+                        },
+                        "Prominence":{
+                            "Description":"Prominence=0.01 (float): minimum peak Intensity for detection",
+                            "Value": 0.01,
+                            "Dimension": "None"
+                        },
+                        "PeakWidth":{
+                            "Description":"PeakWidth=20 (int): minumum peak width for detection",
+                            "Value": 20,
+                            "Dimension": "nm"
+                        }
+                    }
+                }
+            }
+        },
+        "Collection":{
+            "Collector":{
+                "Sequence":["Collector_Collect"],
+                "fixedParams":{"Collect=Volume": 1000}
+            }
+        }
+    }
+}

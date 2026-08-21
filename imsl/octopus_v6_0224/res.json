@@ -1,0 +1,299 @@
+[
+  {
+    "target": -0.40714249161959015,
+    "params": {
+      "AddSolution=A_Injectionrate": 0.07391304347826087,
+      "AddSolution=InP_Injectionrate": 0.10434782608695652,
+      "Heat=Temperature": 1.0,
+      "preHeat=Temperature": 0.75
+    }
+  },
+  {
+    "target": -1.5,
+    "params": {
+      "AddSolution=A_Injectionrate": 0.2826086956521739,
+      "AddSolution=InP_Injectionrate": 0.43478260869565216,
+      "Heat=Temperature": 0.06666666666666667,
+      "preHeat=Temperature": 0.8
+    }
+  },
+  {
+    "target": -1.408519028051085,
+    "params": {
+      "AddSolution=A_Injectionrate": 0.20434782608695654,
+      "AddSolution=InP_Injectionrate": 0.08260869565217391,
+      "Heat=Temperature": 0.2,
+      "preHeat=Temperature": 0.0
+    }
+  },
+  {
+    "target": -1.3855188250464234,
+    "params": {
+      "AddSolution=A_Injectionrate": 0.02608695652173913,
+      "AddSolution=InP_Injectionrate": 0.6391304347826087,
+      "Heat=Temperature": 0.9333333333333333,
+      "preHeat=Temperature": 0.2
+    }
+  },
+  {
+    "target": -1.4798190176908719,
+    "params": {
+      "AddSolution=A_Injectionrate": 0.6173913043478261,
+      "AddSolution=InP_Injectionrate": 0.9869565217391304,
+      "Heat=Temperature": 0.5666666666666667,
+      "preHeat=Temperature": 0.6
+    }
+  },
+  {
+    "target": -1.236333569862053,
+    "params": {
+      "AddSolution=A_Injectionrate": 0.2217391304347826,
+      "AddSolution=InP_Injectionrate": 0.6956521739130435,
+      "Heat=Temperature": 0.1,
+      "preHeat=Temperature": 0.95
+    }
+  },
+  {
+    "target": -1.4073304227264307,
+    "params": {
+      "AddSolution=A_Injectionrate": 0.22608695652173913,
+      "AddSolution=InP_Injectionrate": 0.2,
+      "Heat=Temperature": 0.7,
+      "preHeat=Temperature": 0.1
+    }
+  },
+  {
+    "target": -1.5,
+    "params": {
+      "AddSolution=A_Injectionrate": 0.6173913043478261,
+      "AddSolution=InP_Injectionrate": 0.5695652173913044,
+      "Heat=Temperature": 0.3,
+      "preHeat=Temperature": 0.3
+    }
+  },
+  {
+    "target": -1.5,
+    "params": {
+      "AddSolution=A_Injectionrate": 0.36086956521739133,
+      "AddSolution=InP_Injectionrate": 0.6260869565217392,
+      "Heat=Temperature": 0.16666666666666666,
+      "preHeat=Temperature": 0.95
+    }
+  },
+  {
+    "target": -1.4753287000259538,
+    "params": {
+      "AddSolution=A_Injectionrate": 0.6347826086956522,
+      "AddSolution=InP_Injectionrate": 0.34347826086956523,
+      "Heat=Temperature": 0.0,
+      "preHeat=Temperature": 0.25
+    }
+  },
+  {
+    "target": -1.5,
+    "params": {
+      "AddSolution=A_Injectionrate": 0.3869565217391304,
+      "AddSolution=InP_Injectionrate": 0.7913043478260869,
+      "Heat=Temperature": 0.43333333333333335,
+      "preHeat=Temperature": 0.4
+    }
+  },
+  {
+    "target": -1.1926975214635678,
+    "params": {
+      "AddSolution=A_Injectionrate": 0.3391304347826087,
+      "AddSolution=InP_Injectionrate": 0.9869565217391304,
+      "Heat=Temperature": 0.5,
+      "preHeat=Temperature": 0.25
+    }
+  },
+  {
+    "target": -1.5,
+    "params": {
+      "AddSolution=A_Injectionrate": 0.6478260869565218,
+      "AddSolution=InP_Injectionrate": 0.8565217391304348,
+      "Heat=Temperature": 0.13333333333333333,
+      "preHeat=Temperature": 0.7
+    }
+  },
+  {
+    "target": -1.5,
+    "params": {
+      "AddSolution=A_Injectionrate": 0.9826086956521739,
+      "AddSolution=InP_Injectionrate": 0.24782608695652175,
+      "Heat=Temperature": 0.5333333333333333,
+      "preHeat=Temperature": 0.6
+    }
+  },
+  {
+    "target": -1.5,
+    "params": {
+      "AddSolution=A_Injectionrate": 0.9260869565217391,
+      "AddSolution=InP_Injectionrate": 0.8217391304347826,
+      "Heat=Temperature": 0.03333333333333333,
+      "preHeat=Temperature": 0.65
+    }
+  },
+  {
+    "target": -1.5,
+    "params": {
+      "AddSolution=A_Injectionrate": 0.2391304347826087,
+      "AddSolution=InP_Injectionrate": 0.5217391304347826,
+      "Heat=Temperature": 0.8,
+      "preHeat=Temperature": 0.45
+    }
+  },
+  {
+    "target": -1.5,
+    "params": {
+      "AddSolution=A_Injectionrate": 0.3782608695652174,
+      "AddSolution=InP_Injectionrate": 0.5434782608695652,
+      "Heat=Temperature": 0.6666666666666666,
+      "preHeat=Temperature": 0.05
+    }
+  },
+  {
+    "target": -1.4794494075488696,
+    "params": {
+      "AddSolution=A_Injectionrate": 0.2565217391304348,
+      "AddSolution=InP_Injectionrate": 0.8043478260869565,
+      "Heat=Temperature": 0.7,
+      "preHeat=Temperature": 0.2
+    }
+  },
+  {
+    "target": -1.5,
+    "params": {
+      "AddSolution=A_Injectionrate": 0.3739130434782609,
+      "AddSolution=InP_Injectionrate": 0.5478260869565217,
+      "Heat=Temperature": 0.6333333333333333,
+      "preHeat=Temperature": 0.05
+    }
+  },
+  {
+    "target": -1.5,
+    "params": {
+      "AddSolution=A_Injectionrate": 0.3782608695652174,
+      "AddSolution=InP_Injectionrate": 0.5739130434782609,
+      "Heat=Temperature": 0.6666666666666666,
+      "preHeat=Temperature": 0.4
+    }
+  },
+  {
+    "target": -1.3062089985774592,
+    "params": {
+      "AddSolution=A_Injectionrate": 0.3782608695652174,
+      "AddSolution=InP_Injectionrate": 0.30434782608695654,
+      "Heat=Temperature": 0.6666666666666666,
+      "preHeat=Temperature": 0.0
+    }
+  },
+  {
+    "target": -1.464842810403793,
+    "params": {
+      "AddSolution=A_Injectionrate": 0.30869565217391304,
+      "AddSolution=InP_Injectionrate": 0.5434782608695652,
+      "Heat=Temperature": 0.6666666666666666,
+      "preHeat=Temperature": 0.1
+    }
+  },
+  {
+    "target": -1.5,
+    "params": {
+      "AddSolution=A_Injectionrate": 0.3782608695652174,
+      "AddSolution=InP_Injectionrate": 0.5434782608695652,
+      "Heat=Temperature": 0.8666666666666667,
+      "preHeat=Temperature": 0.3
+    }
+  },
+  {
+    "target": -1.5,
+    "params": {
+      "AddSolution=A_Injectionrate": 0.9956521739130435,
+      "AddSolution=InP_Injectionrate": 0.9782608695652174,
+      "Heat=Temperature": 0.5666666666666667,
+      "preHeat=Temperature": 0.0
+    }
+  },
+  {
+    "target": -1.2958445377129355,
+    "params": {
+      "AddSolution=A_Injectionrate": 0.991304347826087,
+      "AddSolution=InP_Injectionrate": 0.2608695652173913,
+      "Heat=Temperature": 0.03333333333333333,
+      "preHeat=Temperature": 0.8
+    }
+  },
+  {
+    "target": -1.3203837870785426,
+    "params": {
+      "AddSolution=A_Injectionrate": 0.9695652173913043,
+      "AddSolution=InP_Injectionrate": 0.29130434782608694,
+      "Heat=Temperature": 0.1,
+      "preHeat=Temperature": 0.8
+    }
+  },
+  {
+    "target": -0.2899826351507489,
+    "params": {
+      "AddSolution=A_Injectionrate": 0.004347826086956522,
+      "AddSolution=InP_Injectionrate": 0.04782608695652174,
+      "Heat=Temperature": 1.0,
+      "preHeat=Temperature": 1.0
+    }
+  },
+  {
+    "target": -1.4435333973874247,
+    "params": {
+      "AddSolution=A_Injectionrate": 0.10869565217391304,
+      "AddSolution=InP_Injectionrate": 0.008695652173913044,
+      "Heat=Temperature": 1.0,
+      "preHeat=Temperature": 1.0
+    }
+  },
+  {
+    "target": -1.3896298707141654,
+    "params": {
+      "AddSolution=A_Injectionrate": 0.9782608695652174,
+      "AddSolution=InP_Injectionrate": 0.9521739130434783,
+      "Heat=Temperature": 1.0,
+      "preHeat=Temperature": 1.0
+    }
+  },
+  {
+    "target": -1.4962450755804881,
+    "params": {
+      "AddSolution=A_Injectionrate": 0.06086956521739131,
+      "AddSolution=InP_Injectionrate": 0.021739130434782608,
+      "Heat=Temperature": 1.0,
+      "preHeat=Temperature": 1.0
+    }
+  },
+  {
+    "target": -1.4364162664878108,
+    "params": {
+      "AddSolution=A_Injectionrate": 0.8173913043478261,
+      "AddSolution=InP_Injectionrate": 0.8695652173913043,
+      "Heat=Temperature": 1.0,
+      "preHeat=Temperature": 0.0
+    }
+  },
+  {
+    "target": -1.5,
+    "params": {
+      "AddSolution=A_Injectionrate": 0.9869565217391304,
+      "AddSolution=InP_Injectionrate": 0.043478260869565216,
+      "Heat=Temperature": 1.0,
+      "preHeat=Temperature": 1.0
+    }
+  },
+  {
+    "target": -1.4622331231538865,
+    "params": {
+      "AddSolution=A_Injectionrate": 0.6652173913043479,
+      "AddSolution=InP_Injectionrate": 0.030434782608695653,
+      "Heat=Temperature": 0.06666666666666667,
+      "preHeat=Temperature": 0.1
+    }
+  }
+]

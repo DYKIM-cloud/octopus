@@ -1,0 +1,71 @@
+{
+    "metadata" : 
+    {
+        "subject":"InP_core_test",
+        "group":"Hanyang",
+        "logLevel":"DEBUG"
+    },
+    "algorithm":
+    {
+        "model":"Automatic",
+        "totalExperimentNum":2,
+        "inputParams":[
+            {
+                "AddSolution=InP_Injectionrate" : 1250,
+                "AddSolution=A_Injectionrate" : 1250,
+                "preHeat=Temperature" : 60,
+                "Heat=Temperature" : 70
+                
+            }
+        ]
+    },
+    "process":{
+        "Synthesis":{
+            "FlowSynthesis":{
+                "Sequence":["FlowSynthesis_AddSolution=InP","FlowSynthesis_AddSolution=A","FlowSynthesis_preHeat","FlowSynthesis_Heat"],
+                "fixedParams":{}
+            }
+        },
+        "Characterization":{
+            "PL":
+            {
+                "Sequence":["PL_GetPl"],
+                "fixedParams": {
+                    "Hyperparameter":{
+                        "WavelengthMin":{
+                            "Description":"WavelengthMin=300 (int): slice wavlength section depending on wavelength_min and wavelength_max",
+                            "Value": 400,
+                            "Dimension": "nm"
+                        },
+                        "WavelengthMax":{
+                            "Description":"WavelengthMax=849 (int): slice wavlength section depending on wavelength_min and wavelength_max",
+                            "Value": 849,
+                            "Dimension": "nm"
+                        },
+                        "BoxCarSize":{
+                            "Description":"BoxCarSize=10 (int): smooth strength",
+                            "Value": 10,
+                            "Dimension": "None"
+                        },
+                        "Prominence":{
+                            "Description":"Prominence=0.01 (float): minimum peak Intensity for detection",
+                            "Value": 0.01,
+                            "Dimension": "None"
+                        },
+                        "PeakWidth":{
+                            "Description":"PeakWidth=20 (int): minumum peak width for detection",
+                            "Value": 20,
+                            "Dimension": "nm"
+                        }
+                    }
+                }
+            }
+        },
+        "Collection":{
+            "Collector":{
+                "Sequence":["Collector_Collect"],
+                "fixedParams":{"Collect=Volume": 1000}
+            }
+        }
+    }
+}
