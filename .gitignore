@@ -1,0 +1,57 @@
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Secrets / configs
+.env
+*.env
+config.json
+credentials.json
+secrets.json
+token.json
+user_data_head_mapper.json
+
+# Data files
+*.csv
+*.xlsx
+*.xls
+*.parquet
+*.pkl
+*.pickle
+*.h5
+*.hdf5
+*.db
+*.sqlite
+
+# Data folders
+data/
+dataset/
+datasets/
+RawData/
+TestData/
+clean_data/
+test_data/
+
+# Prefect workflow run outputs (my_flow.py --work_folder)
+work/
+duckdb_temp/
+
+# Logs
+*.log
+logs/
