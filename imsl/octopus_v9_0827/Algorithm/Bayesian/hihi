@@ -1,0 +1,29 @@
+def fibonacci_sequence(n):
+    sequence = [0, 1]
+    while len(sequence) < n:
+        sequence.append(sequence[-1] + sequence[-2])
+    return sequence[:n]
+
+# 피보나치 수열의 첫 9개 항을 구합니다.
+fib_sequence = fibonacci_sequence(9)
+fib_sequence
+
+import numpy as np
+
+# 3x3 배열로 변환
+fib_magic_square = np.array(fib_sequence).reshape(3, 3)
+fib_magic_square
+import matplotlib.pyplot as plt
+
+def plot_magic_square(matrix):
+    fig, ax = plt.subplots()
+    cax = ax.matshow(matrix, cmap='viridis')
+
+    for (i, j), val in np.ndenumerate(matrix):
+        ax.text(j, i, f'{val}', ha='center', va='center', color='white')
+
+    plt.colorbar(cax)
+    plt.show()
+
+# 피보나치 수열로 구성된 3x3 배열을 시각화합니다.
+plot_magic_square(fib_magic_square)

@@ -1,0 +1,10 @@
+kappa (UCB exploration weight) = 10.0
+
+[Observed argmax]
+  real params: {'AddSolution=In_Injectionrate': 290.0, 'AddSolution=P_Injectionrate': 160.0, 'Heat=Temperature': 243.0, 'preHeat=Temperature': 42.0}
+  raw observed target = -0.1264
+  GP mean = -0.3674, GP std = 0.1849, UCB = 1.4817
+
+[Suggested next point]
+  real params: {'AddSolution=In_Injectionrate': 210, 'AddSolution=P_Injectionrate': 100, 'preHeat=Temperature': 48, 'Heat=Temperature': 249}
+  GP mean = -0.1357, GP std = 0.1906, UCB = 1.7702
