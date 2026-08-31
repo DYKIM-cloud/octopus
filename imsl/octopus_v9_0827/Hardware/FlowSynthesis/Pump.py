@@ -7,7 +7,7 @@ from Log.Logging_Class import Logger
 class PumpParameter:
     def __init__(self,):
         self.pump_info = {
-            "InP" : {
+            "In" : {
                 "solutionType":"Metal",
                 "pumpPort" : "ns=5;i=7003",
                 "pumpClose" : "ns=5;i=7004",
@@ -15,7 +15,7 @@ class PumpParameter:
                 "pumpAddress" : "ns=1;i=54447",
                 "deviceName" : "Asia"  
             },
-            "A" : {
+            "P" : {
                 "solutionType":"Reductant",
                 "pumpPort" : "ns=5;i=7003",
                 "pumpClose" : "ns=5;i=7004",

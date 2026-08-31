@@ -40,13 +40,13 @@
         },
         "prange":{
             "AddSolution=Ratio" : [1.2,2.2,0.04],
-            "AddSolution=TotalFlowrate" : [220,720,20],
+            "AddSolution=TotalFlowrate" : [220,740,20],
             "preHeat=Temperature" : [40,60,2.5],
             "Heat=Temperature":[225,250,2.5]
         },
         "initParameterList":[],
         "constraints":[
-            "5*x[1] - x[0]", "154 + 45*x[0] - 150*x[1] - 125*x[0]*x[1]"
+            "26*x[1] - 5*x[0]", "154 + 45*x[0] - 156*x[1] - 130*x[0]*x[1]"
         ]
     },
     "process":{
