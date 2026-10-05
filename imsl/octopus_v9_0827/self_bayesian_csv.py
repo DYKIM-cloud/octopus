@@ -442,14 +442,14 @@ if __name__ == "__main__":
     ## INPUT(실험값)
     #params =[{'AddSolution=InP_Injectionrate': 150.0, 'AddSolution=Zn_Injectionrate': 180.0, 'AddSolution=Se_Injectionrate': 1100.0, 'Heat=Temperature':235.0}]
     ## OUTPUT(실험값)
-    #path = "2508optimize\\spectra_with_params_0407.csv"
-    path = "2508optimize\\small_params_zero.csv"
+    #path = "2508optimize\\spectra_with_params_0407_zero.csv"
+    path = "2508optimize\\small_params_zero_ratio.csv"
     #path = "2508optimize\\spectra_with_params_smoothed.csv"
     param_dict, data_dict=load_multisample_csv(path)
     ## path
     job_script_path="InP_core_3.json"
-    load_model_path = "0827_t3.pickle"  # 반드시 다른이름으로 할 것
-    save_model_path = "0827_t3.pickle"  # 반드시 다른이름으로 할 것 - 덮어쓰고나면 복구를 못해요.
+    load_model_path = "2026_smallopt.pickle"  # 반드시 다른이름으로 할 것
+    save_model_path = "2026_smallopt.pickle"  # 반드시 다른이름으로 할 것 - 덮어쓰고나면 복구를 못해요.
     sliced_dict = {}
     pv_list =[]
     #for i in range(len(param_dict),len(param_dict)+1):
@@ -476,7 +476,7 @@ if __name__ == "__main__":
         pv_list.append(peak_velly_ratio)
         #peak_velly_ratio, peak_value=calculateUV_Data_clean_csv2(uv_df=data_df,gauss_sigma_nm = 3.0,bg_wl_min = 560.0,bg_wl_max = 700.0,peak_wl_min = 420.0,peak_wl_max = 510.0,prominence = 0.007, plot =False)
         property_dict = {'lambdamax': peak_value, 'p_v_ratio':peak_velly_ratio}
-        #print(i, property_dict)
+        print(i, property_dict['lambdamax'],property_dict['p_v_ratio'])
         #print(property_dict["lambdamax"],property_dict["p_v_ratio"])
         #result_dict={"PL_GetPl":{"Data":{"Property":{'lambdamax': lambda_max, 'FWHM':FWHM, 'intensity':intensity}}}}
         result_dict= {"UV_GetAbs": {
@@ -566,8 +566,8 @@ if __name__ == "__main__":
         #########################################################
         
         # 새로 모델 만들기
-        if j == 0:
-            createNewModel(configpath=job_script_path,savepath=save_model_path,params=norm_params, loss_obj=loss_obj)
+        #if j == 0:
+        #    createNewModel(configpath=job_script_path,savepath=save_model_path,params=norm_params, loss_obj=loss_obj)
         
         ## 다음 점 추천하기
         #bo_obj = openModel(load_model_path)
@@ -575,15 +575,15 @@ if __name__ == "__main__":
         #print(bo_obj.suggestNextStep())
         
         ## 결과 덮어쓰기
-        else:
-            overwriteSinglePreviousModel(modelpath=load_model_path, savepath=save_model_path, params=norm_params, loss_obj=loss_obj)
+        #else:
+        #    overwriteSinglePreviousModel(modelpath=load_model_path, savepath=save_model_path, params=norm_params, loss_obj=loss_obj)
     
     #sliced_df = pd.DataFrame(sliced_dict)
     #sliced_df.to_csv(os.path.join("fig", "sliced_data.csv"), index=False)
 
-    bo_obj = openModel(save_model_path)
+    #bo_obj = openModel(save_model_path)
     #print(bo_obj.res)
-    print(bo_obj.suggestNextStep())
+    #print(bo_obj.suggestNextStep())
     #print(pv_list)
     '''
     print("--- BO 객체 내부 컬럼명 탐색 ---")

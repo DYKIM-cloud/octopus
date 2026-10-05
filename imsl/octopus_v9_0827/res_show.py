@@ -12,12 +12,12 @@ with open("3.pickle", "wb") as f:
     pickle.dump(model, f)
 '''
 
-with open("{}".format("0827_t2.pickle"), 'rb') as f: 
+with open("{}".format("2026_bigopt.pickle"), 'rb') as f: 
     model = pickle.load(f)
 peak_sample = 0
 for i in range(0,len(model.res)):
-    #print(model.res[i])
-    print(model.res[i]['target'])
+    print(model.res[i]['params'])
+    #print(model.res[i]['target'])
     #if model.res[i]['target'] >= -0.3:
     #    peak_sample =peak_sample+1
     #print(model.constraints)
