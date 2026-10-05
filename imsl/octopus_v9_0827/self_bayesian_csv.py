@@ -543,7 +543,7 @@ if __name__ == "__main__":
                     "GetAbs":{
                         "Property":{
                             "lambdamax":460,
-                            "p_v_ratio":1.3
+                            "p_v_ratio":1.2
                         },
                         "Ratio":{
                             "lambdamax":0.1,
